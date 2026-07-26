@@ -237,7 +237,7 @@ vorab transparent kommuniziert und für alle Studierenden einheitlich angewendet
 werden. Auf diese Weise wird die fachliche Auseinandersetzung unmittelbar
 überprüft, ohne auf unzuverlässige KI-Detektoren zurückzugreifen.
 
-
+#pagebreak()
 = Position und Forderungen des AStA
 
 *Kernthese:* Der AStA lehnt den Einsatz von KI-Detektoren in schriftlichen
@@ -285,7 +285,7 @@ Studierenden in das jeweilige Modul integriert werden. Bestehende mündliche
 Prüfungsteile können diese Aufgabe übernehmen. Die Abfrage wird nicht benotet,
 sondern ausschließlich mit „bestanden“ oder „nicht bestanden“ bewertet.
 
-
+#pagebreak()
 = Quellen
 
 #bibliography(

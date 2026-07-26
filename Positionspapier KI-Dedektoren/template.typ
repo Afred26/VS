@@ -16,7 +16,7 @@
 
 // Schrift
 #let schrift-text   = ("Libertinus Serif", "Linux Libertine", "TeX Gyre Termes")
-#let schrift-titel  = ("Libertinus Sans", "Linux Biolinum", "Latin Modern Sans", "Liberation Sans")
+#let schrift-titel  = ("Libertinus Sans", "Linux Biolinum", "Liberation Sans")
 #let groesse-text   = 11pt
 #let zeilenabstand  = 0.72em    // Durchschuss (leading)
 #let absatzabstand  = 0.9em     // Abstand zwischen Absätzen
