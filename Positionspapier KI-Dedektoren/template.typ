@@ -25,8 +25,40 @@
 #let seitenformat   = "a4"
 #let rand           = (top: 2.6cm, bottom: 2.4cm, left: 2.6cm, right: 2.6cm)
 
+// Logo
+#let farbe-logo-grau = rgb("#5d6971")   // Grauton des DHBW-Schriftzugs
+
 // ----------------------------------------------------------------------
 
+
+// AStA/DHBW-Logo (Icon aus Bilder/dhbw-icon.svg + Schriftzüge).
+// Eigenes offizielles Logobild? Einfach eine Bild-/Grafikdatei unter
+// "Bilder/" ablegen und beim Aufruf von positionspapier(...) per
+// logo: image("Bilder/dein-logo.png", height: 2.2cm) übergeben —
+// das ersetzt dieses Standard-Logo vollständig.
+#let logo-asta-dhbw(icon-hoehe: 1.55cm) = {
+  set text(font: schrift-titel)
+  grid(
+    columns: (auto, auto),
+    column-gutter: 0.45em,
+    align: top + left,
+    image("Bilder/dhbw-icon.svg", height: icon-hoehe),
+    block[
+      #text(size: 15pt, weight: "bold")[
+        #text(fill: farbe-akzent)[DH]#text(fill: farbe-logo-grau)[BW]
+      ]
+      #v(-0.55em)
+      #text(size: 7.3pt, fill: farbe-logo-grau)[
+        Duale Hochschule\
+        Baden-Württemberg
+      ]
+    ],
+  )
+  v(0.5em)
+  text(size: 15pt, weight: "bold", fill: farbe-akzent)[AStA]
+  v(-0.55em)
+  text(size: 7.3pt, fill: farbe-logo-grau)[Allgemeiner\ Studierenden-Ausschuss]
+}
 
 // Hauptfunktion: Diese Funktion umschließt das gesamte Dokument.
 #let positionspapier(
@@ -35,6 +67,7 @@
   koerperschaft: none,
   leitsatz: none,
   datum: none,
+  logo: none,
   body,
 ) = {
   // --- Grundlegende Dokument-Metadaten ---
@@ -111,19 +144,26 @@
   set cite(style: "institute-of-electrical-and-electronics-engineers")
 
   // =================== TITELBLOCK ===================
-  block(width: 100%)[
-    #if koerperschaft != none [
-      #set text(font: schrift-titel, size: 10.5pt, fill: gray.darken(25%))
-      #koerperschaft
-      #v(0.4em)
-    ]
-    #set text(font: schrift-titel, fill: farbe-akzent)
-    #text(size: 21pt, weight: "bold")[#titel]
-    #if untertitel != none [
-      #v(0.3em)
-      #text(size: 13pt, weight: "regular", fill: farbe-text)[#untertitel]
-    ]
-  ]
+  grid(
+    columns: if logo != none { (1fr, auto) } else { (1fr,) },
+    column-gutter: 1.5em,
+    align: (left + top, right + top),
+    block(width: 100%)[
+      #set par(justify: false)
+      #if koerperschaft != none [
+        #set text(font: schrift-titel, size: 10.5pt, fill: gray.darken(25%))
+        #koerperschaft
+        #v(0.4em)
+      ]
+      #set text(font: schrift-titel, fill: farbe-akzent)
+      #text(size: 21pt, weight: "bold")[#titel]
+      #if untertitel != none [
+        #v(0.3em)
+        #text(size: 13pt, weight: "regular", fill: farbe-text)[#untertitel]
+      ]
+    ],
+    if logo != none { logo },
+  )
 
   line(length: 100%, stroke: 1.5pt + farbe-akzent)
 
