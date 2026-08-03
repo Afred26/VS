@@ -18,17 +18,12 @@
 )
 
 #include "Text/0_Ausgangslage.typ"
-#pagebreak()
 #include "Text/1_ Position des AStA in Kürz.typ"
-#pagebreak()
 #include "Text/2_Gründe für die Ablehnung von KI-Detektore.typ"
-#pagebreak()
 #include "Text/3_Fachliche Klärung statt technischer Detektion.typ"
-#pagebreak()
 #include "Text/4_Position und Forderungen des AStA.typ"
-#pagebreak()
 #include "Text/5_Fazit.typ"
-#pagebreak()
+
 = Quellen
 
 #bibliography(
