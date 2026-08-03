@@ -1,5 +1,5 @@
 
-#import "template.typ": positionspapier
+#import "template.typ": positionspapier, logo-asta-dhbw
 
 #show: positionspapier.with(
   koerperschaft: [Allgemeiner Studierenden-Ausschuss (AStA) — DHBW],
@@ -10,6 +10,11 @@
     und fordert stattdessen eine einheitliche fachliche Überprüfung.
   ],
   datum: none,
+  // Standard-Logo (AStA/DHBW-Schriftzug, siehe template.typ).
+  // Eigenes offizielles Logobild stattdessen verwenden: Datei unter
+  // Bilder/ ablegen und diese Zeile z. B. ersetzen durch
+  // logo: image("Bilder/asta-logo.png", height: 2.2cm),
+  logo: logo-asta-dhbw(),
 )
 
 #include "Text/0_Ausgangslage.typ"
