@@ -40,24 +40,10 @@
   set text(font: schrift-titel)
   grid(
     columns: (auto, auto),
-    column-gutter: 0.45em,
+    column-gutter: 0.4em,
     align: top + left,
-    image("Bilder/dhbw-icon.svg", height: icon-hoehe),
-    block[
-      #text(size: 15pt, weight: "bold")[
-        #text(fill: farbe-akzent)[DH]#text(fill: farbe-logo-grau)[BW]
-      ]
-      #v(-0.55em)
-      #text(size: 7.3pt, fill: farbe-logo-grau)[
-        Duale Hochschule\
-        Baden-Württemberg
-      ]
-    ],
+    image("Bilder/AStA_Icon.png", height: 60pt),
   )
-  v(0.5em)
-  text(size: 15pt, weight: "bold", fill: farbe-akzent)[AStA]
-  v(-0.55em)
-  text(size: 7.3pt, fill: farbe-logo-grau)[Allgemeiner\ Studierenden-Ausschuss]
 }
 
 // Hauptfunktion: Diese Funktion umschließt das gesamte Dokument.
