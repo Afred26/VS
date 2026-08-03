@@ -1,0 +1,7 @@
+= Ausgangslage
+
+Die rasche Verbreitung generativer KI-Werkzeuge verändert die Anforderungsprofile in Studium, Prüfung und Beruf grundlegend. Schriftliche Leistungsnachweise lassen sich je nach Aufgabenstellung teilweise oder vollständig automatisiert erstellen, ohne dass sich dies zuverlässig nachweisen ließe. Zugleich wächst die Erwartung, Studierende auf eine Arbeitswelt vorzubereiten, in der KI-gestützte Werkzeuge zum Alltag gehören, ohne dass fachliche Urteilsfähigkeit, Eigenverantwortung und kritischer Umgang mit Quellen an Bedeutung verliert.
+
+Die DHBW steht damit vor einer doppelten Aufgabe: Sie muss die akademische Integrität sichern und zugleich die berufliche Befähigung ihrer Studierenden weiterentwickeln. Dazu gehören praktische KI-Kompetenz, der reflektierte Umgang mit Medien und Quellen, die Sensibilität für Bias in KI-Systemen sowie ein Bewusstsein für den erheblichen Ressourcenverbrauch dieser Technologien.
+
+Der AStA plädiert ausdrücklich nicht für die Abschaffung schriftlicher Leistungen. Stattdessen soll bei schriftlichen Prüfungsleistungen, bei denen eine unzulässige Nutzung generativer KI grundsätzlich möglich ist, eine kurze mündliche Abfrage standardmäßig in das jeweilige Modul integriert werden. Ergänzend fordert der AStA DHBW-einheitliche und klar kommunizierte prüfungsrechtliche Regelungen, insbesondere für Haus-, Praxis- und Studienarbeiten.

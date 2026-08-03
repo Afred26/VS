@@ -10,7 +10,7 @@
 // ------------------------- EINSTELLUNGEN ------------------------------
 
 // Farben
-#let farbe-akzent   = rgb("#1f3a5f")   // Überschriften, Linien (AStA-Blau)
+#let farbe-akzent   = rgb("#E30613")   // Überschriften, Linien (VS-Rot))
 #let farbe-text     = rgb("#1a1a1a")   // Fließtext
 #let farbe-hervorh  = rgb("#1f3a5f")   // fette Hervorhebungen im Text
 
@@ -19,7 +19,7 @@
 #let schrift-titel  = ("Libertinus Sans", "Linux Biolinum", "Liberation Sans")
 #let groesse-text   = 11pt
 #let zeilenabstand  = 0.72em    // Durchschuss (leading)
-#let absatzabstand  = 0.9em     // Abstand zwischen Absätzen
+#let absatzabstand  = 1.25em     // Abstand zwischen Absätzen
 
 // Seite
 #let seitenformat   = "a4"
@@ -67,7 +67,7 @@
     fill: farbe-text,
     lang: "de",
     region: "DE",
-    hyphenate: true,
+    hyphenate: false,
   )
   set par(
     justify: true,
@@ -86,7 +86,7 @@
   // Ebene 1 (Hauptabschnitte)
   show heading.where(level: 1): it => {
     set text(size: 15pt)
-    block(above: 1.6em, below: 0.8em)[
+    block(above: 1em, below: 0.8em)[
       #it
       #v(-0.4em)
       #line(length: 100%, stroke: 1pt + farbe-akzent)
@@ -95,14 +95,14 @@
   // Ebene 2 (Unterabschnitte)
   show heading.where(level: 2): it => {
     set text(size: 12.5pt)
-    block(above: 1.2em, below: 0.5em, it)
+    block(above: 2.5em, below: 1.25em, it)
   }
 
   // --- Fette Hervorhebungen einfärben ---
   show strong: set text(fill: farbe-hervorh)
 
   // --- Listen ---
-  set list(indent: 0.6em, spacing: 0.7em, marker: text(farbe-akzent)[•])
+  set list(indent: 0.6em, spacing: 0.8em, marker: text(farbe-akzent)[•])
 
   // --- Links ---
   show link: set text(fill: farbe-akzent)
@@ -114,7 +114,7 @@
   block(width: 100%)[
     #if koerperschaft != none [
       #set text(font: schrift-titel, size: 10.5pt, fill: gray.darken(25%))
-      #smallcaps(koerperschaft)
+      #koerperschaft
       #v(0.4em)
     ]
     #set text(font: schrift-titel, fill: farbe-akzent)
