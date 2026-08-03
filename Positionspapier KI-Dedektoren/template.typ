@@ -9,10 +9,10 @@
 
 // ------------------------- EINSTELLUNGEN ------------------------------
 
-// Farben
-#let farbe-akzent   = rgb("#E30613")   // Überschriften, Linien (VS-Rot))
+// Farben (DHBW-Markenfarben, siehe Bilder/dhbw-icon.svg / CD-Manual)
+#let farbe-akzent   = rgb("#E2001A")   // Überschriften, Linien (DHBW-Rot)
 #let farbe-text     = rgb("#1a1a1a")   // Fließtext
-#let farbe-hervorh  = rgb("#1f3a5f")   // fette Hervorhebungen im Text
+#let farbe-hervorh  = rgb("#8E1016")   // fette Hervorhebungen im Text (DHBW-Dunkelrot)
 
 // Schrift
 #let schrift-text   = ("Libertinus Serif", "Linux Libertine", "TeX Gyre Termes")
