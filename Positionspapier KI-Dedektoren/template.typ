@@ -99,21 +99,21 @@
   set heading(numbering: "1.1")
 
   show heading: it => {
-    set text(font: schrift-titel, fill: farbe-akzent, weight: "bold")
+    set text(font: schrift-titel, fill: farbe-text, weight: "bold")
     it
   }
-  // Ebene 1 (Hauptabschnitte)
+  // Ebene 1 (Hauptabschnitte): roter Akzent, da hier sparsam eingesetzt
   show heading.where(level: 1): it => {
-    set text(size: 15pt)
+    set text(size: 15pt, fill: farbe-akzent)
     block(above: 1em, below: 0.8em)[
       #it
       #v(-0.4em)
       #line(length: 100%, stroke: 1pt + farbe-akzent)
     ]
   }
-  // Ebene 2 (Unterabschnitte)
+  // Ebene 2 (Unterabschnitte): zurückhaltend in Textfarbe, Hierarchie über Größe/Schnitt
   show heading.where(level: 2): it => {
-    set text(size: 12.5pt)
+    set text(size: 12.5pt, fill: farbe-text)
     block(above: 2.5em, below: 1.25em, it)
   }
 
